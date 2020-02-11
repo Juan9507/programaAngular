@@ -1,0 +1,16 @@
+<form (keydown.enter)="false" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label for="">
+        First Name:
+        <input #input1 (keydown.enter)="pasarSengundo($event)" type="text" formControlName="firstName">
+    </label>
+    <label for="">
+        last Name:
+        <input #input2 (keydown.enter)="pasarTercero($event)" type="text" formControlName="lastName">
+    </label>
+    <label for="">
+        Second Name:
+        <input #input3 (keydown.enter)="validar($event)" type="text" formControlName="secondName">
+    </label>
+    <button type="submit" [disabled]="!profileForm.valid">submit</button>
+</form>
+<!-- (keydown.enter)="pasarButton($event)" -->
