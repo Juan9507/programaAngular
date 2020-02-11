@@ -48,7 +48,8 @@ export class ProfileEditorComponent implements OnInit {
         this.input3.nativeElement.style.backgroundColor = "yellow";
         this.input3.nativeElement.focus();
     }else if(this.profileForm.value.firstName != "" && this.profileForm.value.lastName != "" && this.profileForm.value.secondName != ""){
-        console.warn(this.profileForm.value);
+        // alert(this.profileForm.value);
+        alert(JSON.stringify(this.profileForm.value, null, 4));
     }
 
   }
